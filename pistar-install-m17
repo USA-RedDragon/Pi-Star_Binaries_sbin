@@ -8,7 +8,7 @@
 #                                                                            #
 ##############################################################################
 # Install with
-# curl https://raw.githubusercontent.com/nolith/Pi-Star_Binaries_sbin/M17/pistar-install-m17 | sudo bash -
+# curl https://raw.githubusercontent.com/USA-RedDragon/Pi-Star_Binaries_sbin/M17/pistar-install-m17 | sudo bash -
 
 set -e
 
@@ -22,31 +22,31 @@ fi
 mount -o remount,rw /
 
 pushd /var/www/dashboard
-if [[ $(git remote | grep  nolith) != "nolith" ]] ; then
+if [[ $(git remote | grep  USARedDragon) != "USARedDragon" ]] ; then
     echo "Patching Dashboard"
     
-    git remote add nolith https://github.com/nolith/Pi-Star_DV_Dash.git
-    git fetch nolith
+    git remote add USARedDragon https://github.com/USA-RedDragon/Pi-Star_DV_Dash.git
+    git fetch USARedDragon
     git checkout M17
 fi
 popd
 
 pushd /usr/local/sbin
-if [[ $(git remote | grep  nolith) != "nolith" ]] ; then
+if [[ $(git remote | grep  USARedDragon) != "USARedDragon" ]] ; then
     echo "Patching sbin"
     
-    git remote add nolith https://github.com/nolith/Pi-Star_Binaries_sbin.git
-    git fetch nolith
+    git remote add USARedDragon https://github.com/USA-RedDragon/Pi-Star_Binaries_sbin.git
+    git fetch USARedDragon
     git checkout M17
 fi
 popd
 
 pushd /usr/local/bin
-if [[ $(git remote | grep  nolith) != "nolith" ]] ; then
+if [[ $(git remote | grep  USARedDragon) != "USARedDragon" ]] ; then
     echo "Patching bin"
 
-    git remote add nolith https://github.com/nolith/Pi-Star_v4_Binaries_bin.git
-    git fetch nolith
+    git remote add USARedDragon https://github.com/USA-RedDragon/Pi-Star_v4_Binaries_bin.git
+    git fetch USARedDragon
     git checkout M17
 fi
 popd

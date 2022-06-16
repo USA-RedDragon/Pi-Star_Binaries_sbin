@@ -13,7 +13,7 @@ mount -o remount,rw /
 /usr/local/sbin/HostFilesUpdate.sh
 
 # Update the Dashboard from GIT
-git --work-tree=/var/www/dashboard --git-dir=/var/www/dashboard/.git pull nolith M17
+git --work-tree=/var/www/dashboard --git-dir=/var/www/dashboard/.git pull USARedDragon M17
 
 # Stop all the services...
 systemctl stop pistar-watchdog.service > /dev/null 2>&1
@@ -41,10 +41,10 @@ if [ -f /lib/systemd/system/aprsgateway.service ]; then
 fi
 
 # Update the Binaries
-git --work-tree=/usr/local/bin --git-dir=/usr/local/bin/.git pull nolith M17
+git --work-tree=/usr/local/bin --git-dir=/usr/local/bin/.git pull USARedDragon M17
 
 # Update the Binaries (sbin)
-git --work-tree=/usr/local/sbin --git-dir=/usr/local/sbin/.git pull nolith M17
+git --work-tree=/usr/local/sbin --git-dir=/usr/local/sbin/.git pull USARedDragon M17
 
 # Purge the logs older than 2 days
 rm -f $(find /var/log/pi-star/*.log -type f -mtime +0 -print)

@@ -21,7 +21,7 @@ if ! flock -n 200 ; then
   exit 1
 fi
 
-gitRemote="nolith"
+gitRemote="USARedDragon"
 gitBranch="M17"
 
 git_checkUpdateRequired() {
