@@ -46,7 +46,7 @@ echo "Starting Calibration..."
 /usr/local/bin/MMDVMCal ${mmdvmSpeed} ${mmdvmModem} >/dev/null 2>&1 &
 sleep 3
 killall MMDVMCal >/dev/null 2>&1
-/usr/local/bin/MMDVMCal ${mmdvmModem}
+/usr/local/bin/MMDVMCal ${mmdvmSpeed} ${mmdvmModem}
 
 # Output some feedback to the terminal
 echo "Starting Pi-Star Services..."
