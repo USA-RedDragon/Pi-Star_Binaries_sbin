@@ -21,6 +21,7 @@ fi
 # Make the disk RW
 mount -o remount,rw /
 
+git config --global --add safe.directory /var/www/dashboard
 pushd /var/www/dashboard
 if [[ $(git remote | grep  USARedDragon) != "USARedDragon" ]] ; then
     echo "Patching Dashboard"
